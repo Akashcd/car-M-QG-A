@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+    
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Finance Quote</title>
+    
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE9BEPRLK3"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    // Force spoofed referrer BEFORE config
+    gtag('set', 'page_referrer', 'https://easyfinancequote.com');
+    
+    gtag('config', 'G-YE9BEPRLK3');
+</script>
+
+    
+    
+    <script>
+        (function() {
+            // Clean UTM params immediately
+            const url = new URL(window.location.href);
+            const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid', 'msclkid'];
+            let hasChanges = false;
+            utmParams.forEach(param => {
+                if (url.searchParams.has(param)) {
+                    url.searchParams.delete(param);
+                    hasChanges = true;
+                }
+            });
+            if (hasChanges) {
+                window.history.replaceState({}, '', url.href);
+            }
+
+            // Spoof document.referrer for JS trackers on this page
+            Object.defineProperty(document, 'referrer', {
+                get: function() { return 'https://easyfinancequote.com'; },
+                configurable: true
+            });
+        })();
+    </script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f4f4f4; }
+        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 20px auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <h1>Redirecting to Your Finance Quote...</h1>
+    <div class="loader"></div>
+    <p>One moment while we prepare your personalized offer.</p>
+    <script>
+        // Auto-redirect after 3 seconds
+        setTimeout(function() {
+            window.location.href = 'https://jtqfa.ttrk.io/click';
+        });
+    </script>
+</body>
+</html>
